@@ -36,7 +36,7 @@
       }
 
       .nav-links {
-        z-index: 2;
+      z-index: 1;
         list-style: none;
         display: flex;
         gap: 20px;
@@ -527,6 +527,65 @@
       .center-sosmed i {
         margin-right: 8px;
       }
+      
+      .biodata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.biodata-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.biodata-left h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.biodata-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.biodata-right {
+    flex: 0.7;
+    text-align: center;
+}
+
+.biodata-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .biodata {
+        flex-direction: column;
+        
+    }
+
+    .biodata-left {
+        padding-right: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .biodata-right img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
     </style>
   </head>
   <body>
@@ -719,6 +778,19 @@
           </div>
         </div>
       </div>
+      <div class="biodata">
+        <div class="biodata-left">
+        <h1> Biodata Penulis</h1>
+        <p>
+          Nama: Yudas Iskariot
+          Umur: -
+          tinggal: jakarta
+        </p>
+        </div>
+        <div class="biodata-right">
+          <img src="https://cdn.idntimes.com/content-images/duniaku/post/20220725/amya-8a70704c4f1e803125f881be76f4fe22_600x400.png">
+        </div>
+      </div>
     </main>
     <footer>
       <div class="center-sosmed">
@@ -766,29 +838,4 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         const skillItems = document.querySelectorAll(".main-content");
-        skillItems.forEach((item, index) => {
-          setTimeout(() => {
-            item.style.opacity = 1;
-            item.style.transform = "translateY(0)";
-          }, index * 200);
-        });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const films = document.querySelectorAll(".film-kesukaan");
-        films.forEach((film, index) => {
-          setTimeout(() => {
-            film.style.opacity = 1;
-            film.style.transform = "translateY(0)";
-          }, index * 200);
-        });
-      });
-
-      document
-        .querySelector(".menu-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-links").classList.toggle("show");
-        });
-    </script>
-  </body>
-</html>
+        skillItems.forEach((item, index)
