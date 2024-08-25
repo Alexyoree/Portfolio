@@ -504,32 +504,6 @@
         line-height: 1.6;
       }
 
-      footer {
-        background-color: #007bff;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-      }
-      .center-sosmed {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-      .center-sosmed a {
-        font-family: Arial, sans-serif;
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-        transition: color 0.3s, transform 0.3s;
-      }
-      .center-sosmed a:hover {
-        color: #f39c12;
-        transform: scale(1.1);
-      }
-      .center-sosmed i {
-        margin-right: 8px;
-      }
-
       .biodata-container {
         max-width: 800px;
         margin: 50px auto;
@@ -618,6 +592,325 @@
         }
         to {
           transform: translateX(-100%);
+        }
+      }
+      .contact-container {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .illustration-img {
+        margin: 0px;
+        width: 800px;
+      }
+
+      .contact {
+        display: inline-block;
+        margin: 10px 30px;
+        text-align: center;
+      }
+
+      .profile-contact-img {
+        width: 200px;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .icon {
+        margin-right: 6px;
+      }
+
+      .contact {
+        display: inline-block;
+        margin: 10px 30px;
+        text-align: center;
+      }
+
+      .profile-contact-img {
+        width: 200px;
+      }
+
+      .contact {
+        display: inline-block;
+        margin: 10px 30px;
+        text-align: center;
+      }
+
+      .profile-contact-img {
+        width: 200px;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .icon {
+        margin-right: 6px;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .input-container {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .form-label {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+      .form-input {
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        outline: none;
+        height: 48px;
+        margin-bottom: 15px;
+        padding: 0;
+      }
+
+      .input-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-style: none;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        height: 100%;
+      }
+
+      .textarea-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .form-textarea {
+        position: relative;
+      }
+
+      .textarea {
+        border-style: none;
+        border-bottom: 1px solid grey;
+        outline: none;
+        margin-top: 10px;
+      }
+
+      .submit {
+        border-style: none;
+        border-radius: 25px;
+        color: aliceblue;
+        background-color: rgb(38, 70, 83);
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .input-item:not(:placeholder-shown).input-item:not(:focus) + .form-label {
+        top: -2px;
+        left: -2px;
+        font-size: 10px;
+        color: rgb(138, 130, 130);
+      }
+
+      .icon {
+        margin-right: 6px;
+      }
+      .fa-user,
+      .fa-map-marker-alt,
+      .fa-envelope-open,
+      .fa-comment {
+        font-size: 27px;
+      }
+
+      .textarea-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .form-textarea {
+        position: relative;
+      }
+
+      .textarea {
+        border-style: none;
+        border-bottom: 1px solid grey;
+        outline: none;
+        margin-top: 10px;
+      }
+
+      .submit {
+        width: 130px;
+        height: 50px;
+        border-style: none;
+        border-radius: 20px;
+        color: aliceblue;
+        background-color: rgb(38, 70, 83);
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .input-item:focus + .form-label {
+        top: -5px;
+        left: -2px;
+        font-size: 10px;
+      }
+      .textarea:focus + .form-label {
+        top: -5px;
+        left: -2px;
+        font-size: 10px;
+      }
+
+      .modal-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.411);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+      }
+
+      .show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .modal {
+        width: 600px;
+        height: 400px;
+        position: relative;
+        background-color: white;
+        padding: 35px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .modal h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+      }
+
+      .modal p {
+        margin: 20px 0;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      .modal img {
+        display: block;
+        margin: 0 auto 0 auto;
+        padding: 0;
+        width: 300px;
+      }
+
+      .show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+      }
+
+      .modal-container.show {
+        display: flex;
+      }
+
+      @media screen and (max-width: 768px) {
+        .contact-container {
+          flex-direction: column;
+        }
+
+        .ilustration,
+        .contact {
+          max-width: 100%;
+        }
+
+        .illustration-img {
+          width: 80%;
+          max-width: 300px;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        .form-container {
+          gap: 10px;
+        }
+
+        .input-item,
+        .textarea {
+          font-size: 0.9rem;
+        }
+
+        .submit {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        .illustration-img {
+          margin-left: 50px;
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .input-item,
+        .textarea {
+          font-size: 0.85rem;
+        }
+
+        .submit {
+          font-size: 0.85rem;
         }
       }
     </style>
@@ -874,13 +1167,92 @@
         />
       </div>
     </div>
-    <footer>
-      <div class="center-sosmed">
-        <a href=""><i class="bx bxl-instagram">Intagram</i></a>
-        <a href=""><i class="bx bxl-facebook-square">Facebook</i></a>
-        <a href=""><i class="bx bxl-github">github</i></a>
+    <div class="contact-container">
+      <div class="ilustration">
+        <img
+          class="illustration-img"
+          src="assets/undraw_Web_devices_re_m8sc.png"
+          alt=""
+          width="500px"
+        />
       </div>
-    </footer>
+      <div class="contact">
+        <img
+          class="profile-contact-img"
+          src="assets/undraw_Male_avatar_g98d.png"
+          alt=""
+        />
+        <h1>Contact Me</h1>
+        <p>Please feel free to contact me</p>
+        <h4>Your Information</h4>
+
+        <form>
+          <div class="form-container">
+            <div class="input-container">
+              <div class="icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="form-input">
+                <input
+                  class="input-item"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=" "
+                />
+                <label for="name" class="form-label"> Name </label>
+              </div>
+            </div>
+
+            <div class="input-container">
+              <div class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="form-input">
+                <input
+                  class="input-item"
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder=" "
+                />
+                <label for="city" class="form-label">City</label>
+              </div>
+            </div>
+
+            <div class="input-container">
+              <div class="icon">
+                <i class="far fa-envelope-open"></i>
+              </div>
+              <div class="form-input">
+                <input
+                  class="input-item"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=" "
+                />
+                <label for="email" class="form-label">Email</label>
+              </div>
+            </div>
+
+            <div class="textarea-container">
+              <div class="form-textarea">
+                <textarea
+                  class="textarea"
+                  name="message"
+                  id="message"
+                  placeholder=" "
+                ></textarea>
+                <label for="message" class="form-label">Message</label>
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Submit" class="submit" />
+        </form>
+      </div>
+    </div>
+
     <script>
       const texts1 = [
         "Hello World!",
