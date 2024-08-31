@@ -936,7 +936,7 @@
         color: white;
       }
 
-      .dark-mode .biodata-container  {
+      .dark-mode .biodata-container {
         color: black;
         border-radius: 10px;
         box-shadow: 1px 0 15px white;
@@ -952,10 +952,23 @@
         margin-left: auto;
       }
 
+      .dark-mode .input-container {
+        color: white;
+      }
       .switch input {
         opacity: 0;
         width: 0;
         height: 0;
+      }
+
+      body.dark-mode .form-container {
+        background-color: #444444;
+      }
+      
+      body.dark-mode .input-item,
+      body.dark-mode .textarea {
+        border-color: #555;
+        color: #ffffff;
       }
 
       .slider {
@@ -1343,7 +1356,7 @@
             <li>Fix bug Android responsif</li>
             <li>Perbaikan contact</li>
             <li>Penambahan changelogs</li>
-            <li>penambahan beberapa fitur </li>
+            <li>penambahan beberapa fitur</li>
           </ul>
         </div>
       </div>
@@ -1439,7 +1452,7 @@
         "Hello World!",
         "Welcome to my gabut side",
         "Enjoy Your Stay!",
-        "Lanciau yang liat",
+        "enjoyy",
         "Have a Great Day!",
       ];
       const colors = [
@@ -1528,32 +1541,30 @@
             document.body.classList.remove("dark-mode");
           }
         }
-        
+
         toggleMode();
 
         inputElement.addEventListener("change", toggleMode);
       });
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const themeToggle = document.getElementById('theme');
-    
- 
-        if (localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.checked = true;
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme");
+
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+          themeToggle.checked = true;
         }
-    
-        themeToggle.addEventListener('change', () => {
-            if (themeToggle.checked) {
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
-            }
+
+        themeToggle.addEventListener("change", () => {
+          if (themeToggle.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark");
+          } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light");
+          }
         });
-    });
-          
+      });
     </script>
   </body>
 </html>
