@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yudas Su</title>
+    <title>Lexx</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -600,13 +600,13 @@
       }
 
       .illustration-img {
-        margin: 0px;
+        margin: 70px;
         width: 800px;
       }
 
       .contact {
         display: inline-block;
-        margin: 10px 30px;
+        transform: translateY(60px);
         text-align: center;
       }
 
@@ -784,80 +784,6 @@
         font-size: 10px;
       }
 
-      .modal-container {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.411);
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 1s, opacity 1s;
-      }
-
-      .show {
-        visibility: visible;
-        opacity: 1;
-      }
-
-      .modal {
-        width: 600px;
-        height: 400px;
-        position: relative;
-        background-color: white;
-        padding: 35px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-
-      .modal h3 {
-        margin: 0;
-        padding: 0;
-        font-size: 30px;
-      }
-
-      .modal p {
-        margin: 20px 0;
-        padding: 0;
-        font-size: 15px;
-      }
-
-      .modal img {
-        display: block;
-        margin: 0 auto 0 auto;
-        padding: 0;
-        width: 300px;
-      }
-
-      .show {
-        visibility: visible;
-        opacity: 1;
-      }
-
-      .modal-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.7);
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-      }
-
-      .modal-container.show {
-        display: flex;
-      }
-
       @media screen and (max-width: 768px) {
         .contact-container {
           flex-direction: column;
@@ -913,11 +839,221 @@
           font-size: 0.85rem;
         }
       }
+
+      .changelogs {
+        margin-right: auto;
+        margin-bottom: 50px;
+        max-width: 800px;
+        margin-left: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .Header-changelog h1 {
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        color: #333;
+      }
+
+      .list-changelogs {
+        margin-top: 20px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .changelogs:hover .list-changelogs {
+        max-height: 300px;
+      }
+
+      .list-changelogs h1 {
+        font-size: 1.2em;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      .list-changelogs ul {
+        padding-left: 20px;
+        color: #666;
+        font-family: "Arial", sans-serif;
+      }
+      body.light-mode {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      body.dark-mode {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      .dark-mode .container {
+        background-color: black;
+        color: white;
+        box-shadow: 0 5px 20px white;
+      }
+
+      .dark-mode .main-content {
+        background-color: black;
+        box-shadow: 1px 0 15px white;
+      }
+
+      .dark-mode .main-content p {
+        color: white;
+      }
+
+      .dark-mode .list-film {
+        background-color: black;
+        box-shadow: 1px 0 15px white;
+      }
+
+      .dark-mode .list-game-kesukaan {
+        box-shadow: 1px 0 15px white;
+      }
+
+      .dark-mode .anime-kesukaan {
+        box-shadow: 1px 0 15px white;
+      }
+
+      .dark-mode .biodata-content {
+        color: black;
+        box-shadow: 1px 0 15px white;
+      }
+
+      .dark-mode .film-kesukaan,
+      .dark-mode .anime-kesukaan,
+      .dark-mode .game-kesukaan,
+      .dark-mode .list-game-kesukaan {
+        background-color: black;
+        box-shadow: 1px 0 15px white;
+        color: white;
+      }
+
+      .dark-mode .list-game-kesukaan h1,
+      .dark-mode .anime-kesukaan h1 {
+        color: white;
+      }
+
+      .dark-mode .biodata-container  {
+        color: black;
+        border-radius: 10px;
+        box-shadow: 1px 0 15px white;
+      }
+      .dark-mode .contact img {
+        border-radius: 70px;
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 64px;
+        height: 34px;
+        margin-left: auto;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #73c0fc;
+        transition: 0.4s;
+        border-radius: 30px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        border-radius: 20px;
+        left: 2px;
+        bottom: 2px;
+        z-index: 2;
+        background-color: #e8e8e8;
+        transition: 0.4s;
+      }
+
+      .sun svg {
+        position: absolute;
+        top: 6px;
+        left: 36px;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+      }
+
+      .moon svg {
+        fill: #73c0fc;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+      }
+
+      .switch:hover .sun svg {
+        animation: rotate 15s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .switch:hover .moon svg {
+        animation: tilt 5s linear infinite;
+      }
+
+      @keyframes tilt {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        25% {
+          transform: rotate(-10deg);
+        }
+
+        75% {
+          transform: rotate(10deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .input:checked + .slider {
+        background-color: #183153;
+      }
+
+      .input:focus + .slider {
+        box-shadow: 0 0 1px #183153;
+      }
+
+      .input:checked + .slider:before {
+        transform: translateX(30px);
+      }
     </style>
   </head>
   <body>
     <header>
-      <h1>Yudas Su</h1>
+      <h1>Lexx</h1>
       <nav>
         <button class="menu-toggle" aria-label="Toggle navigation">
           &#9776;
@@ -926,10 +1062,30 @@
           <li><a href="index.html" id="home">Home</a></li>
           <li><a href="#" id="about">About</a></li>
           <li><a href="#" id="contact">Contact</a></li>
+          <li>
+            <label class="switch" class="theme">
+              <span class="sun"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#ffd43b">
+                    <circle r="5" cy="12" cx="12"></circle>
+                    <path
+                      d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                    ></path>
+                  </g></svg
+              ></span>
+              <span class="moon"
+                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                  <path
+                    d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path></svg
+              ></span>
+              <input type="checkbox" class="input" id="modeToggleInput" />
+              <span class="slider"></span>
+            </label>
+          </li>
         </ul>
       </nav>
     </header>
-
     <main>
       <div class="container">
         <div class="left">
@@ -1113,16 +1269,16 @@
           />
         </div>
         <div class="biodata-content">
-          <h1>Yudas Su</h1>
+          <h1>Lexxx</h1>
           <p>
-            Hello! I'm Yudas Su, a passionate web developer with skills in HTML,
+            Hello! I'm Lexxx, a passionate web developer with skills in HTML,
             CSS, and JavaScript. I love creating beautiful and functional
             websites with a touch of creativity. Anime inspires my work and adds
             a unique flavor to my designs.
           </p>
           <div class="anime-theme">
             <i class="bx bxs-heart"></i>
-            <span>Copyright Yudas suu</span>
+            <span>Copyright Lexx</span>
           </div>
         </div>
       </div>
@@ -1167,6 +1323,32 @@
         />
       </div>
     </div>
+
+    <div class="changelogs">
+      <div class="Header-changelog">
+        <h1>Daftar pengubahan website masa ke masa</h1>
+        <div class="list-changelogs">
+          <h1>Update 1.0</h1>
+          <ul>
+            <li>penambahaan gambar baris seperti iklan</li>
+            <li>Penambahan kontak</li>
+            <li>Responsif ke android</li>
+            <li>Fix bug</li>
+          </ul>
+        </div>
+        <div class="list-changelogs">
+          <h1>Update 2.0</h1>
+          <ul>
+            <li>Penambahan Dark mode dan Light mode</li>
+            <li>Fix bug Android responsif</li>
+            <li>Perbaikan contact</li>
+            <li>Penambahan changelogs</li>
+            <li>penambahan beberapa fitur </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="contact-container">
       <div class="ilustration">
         <img
@@ -1235,7 +1417,6 @@
                 <label for="email" class="form-label">Email</label>
               </div>
             </div>
-
             <div class="textarea-container">
               <div class="form-textarea">
                 <textarea
@@ -1334,6 +1515,45 @@
       right.addEventListener("mouseout", () => {
         right.style.transform = "scale(1)";
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputElement = document.getElementById("modeToggleInput");
+
+        function toggleMode() {
+          if (inputElement.checked) {
+            document.body.classList.add("dark-mode");
+            document.body.classList.remove("light-mode");
+          } else {
+            document.body.classList.add("light-mode");
+            document.body.classList.remove("dark-mode");
+          }
+        }
+        
+        toggleMode();
+
+        inputElement.addEventListener("change", toggleMode);
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('theme');
+    
+ 
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.checked = true;
+        }
+    
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    });
+          
     </script>
   </body>
 </html>
